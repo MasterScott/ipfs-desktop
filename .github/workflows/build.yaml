@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   lint-unit:
-    name: lint and unit testing
+    name: lint, unit testing
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -15,7 +15,7 @@ jobs:
       - run: npm run lint
       - run: npm run test
   e2e-build:
-    name: e2e tests and building
+    name: e2e tests, build
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
